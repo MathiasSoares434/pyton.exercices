@@ -6,6 +6,7 @@ while n<= alunos:
     notas = float(input('Digite a nota dos alunos'))
     contador+=notas
     n+=1
-    media=(contador/alunos)
+
+media=(contador/alunos)
 
 print(media)
