@@ -19,25 +19,9 @@ def print_mensage_winner():
     print("         _.' '._        ")
     print("        '-------'       ")
 
-def print_mensage_loser(word_secret):
-    print("Puxa, você foi enforcado!")
-    print("A palavra era {}".format(word_secret))
-    print("    _______________         ")
-    print("   /               \       ")
-    print("  /                 \      ")
-    print("//                   \/\  ")
-    print("\|   XXXX     XXXX   | /   ")
-    print(" |   XXXX     XXXX   |/     ")
-    print(" |   XXX       XXX   |      ")
-    print(" |                   |      ")
-    print(" \__      XXX      __/     ")
-    print("   |\     XXX     /|       ")
-    print("   | |           | |        ")
-    print("   | I I I I I I I |        ")
-    print("   |  I I I I I I  |        ")
-    print("   \_             _/       ")
-    print("     \_         _/         ")
-    print("       \_______/           ")
+
+
+
 
 def draw_forca(mistakes):
     print("  _______     ")
@@ -84,12 +68,25 @@ def draw_forca(mistakes):
         print(" |      \|/   ")
         print(" |       |    ")
         print(" |      / \   ")
+        print("    _______________         ")
+        print("   /               \       ")
+        print("  /                 \      ")
+        print("//                   \/\  ")
+        print("\|   XXXX     XXXX   | /   ")
+        print(" |   XXXX     XXXX   |/     ")
+        print(" |   XXX       XXX   |      ")
+        print(" |                   |      ")
+        print(" \__      XXX      __/     ")
+        print("   |\     XXX     /|       ")
+        print("   | |           | |        ")
+        print("   | I I I I I I I |        ")
+        print("   |  I I I I I I  |        ")
+        print("   \_             _/       ")
+        print("     \_         _/         ")
+        print("       \_______/           ")
+        print("MORREU OTÁRIO HAHAHAHAHA")
 
-    print(" |            ")
-    print("_|___         ")
     print()
-
-
 
 def load_word_secret():
     words= ['Jujuba', 'Carniça', 'Bob', 'Lakers', 'Santa cruz', 'Celtics', 'Sport']
@@ -135,19 +132,17 @@ def playGame():
                 print('Você ainda tem que acertar {} letras'.format(letters_missing))
                 print('Você ainda tem {} tentativas'.format(7-mistakes))
                 draw_forca(mistakes)
-            
+
             die = mistakes == 7
             correct="_" not in letters_corrects
             print(letters_corrects)
         if (correct):
             print_mensage_winner()
-        else:
-            print_mensage_loser(word_secret)
+
 
     print("Fim do jogo")
 
             
-if(__name__ == '__main__'):
-    playGame()
+playGame()
 
 
