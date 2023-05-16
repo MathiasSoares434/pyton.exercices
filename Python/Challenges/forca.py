@@ -3,22 +3,21 @@ def show_word(word, correct_letters):
     show= ''
     for letter in word:
         if letter in correct_letters:
-            show += letter + ' '
+            show+=letter+' '
         else:
-            show += '_ '
+            show+='_ '
     return show
-
-def game_of_strength(word):
+def game_of_strenght(word):
     wrong_letters= []
     correct_letters= []
     shoots= 7
     print("*********************************")
     print("***Bem vindo ao jogo da FORCA!***")
     print("*********************************")
-    print('\n' + 'Adivinhe a palavra secreta.')
+    print('\n' + 'Adivinhe a palavra secreta.')    
     while True:
         print('\n' + show_word(word, correct_letters))
-        if shoots == 0:
+        if shoots==0:
                     print("    _______________         ")
                     print("   /               \       ")
                     print("  /                 \      ")
@@ -50,18 +49,14 @@ def game_of_strength(word):
                 print("           ) (          ")
                 print("         _.' '._        ")
                 print("        '-------'       ")
-                break       
-        
-        letter= input('Digite uma letra: ').lower()
-
+                break
+        letter= input('Digite a letra: ').upper()
         if letter in word:
               correct_letters.append(letter)
-
         else:
-            wrong_letters.append(letter)
-            shoots-=1
-            print('Letras errada(s):', wrong_letters)
-            print('Tentativas restantes:', shoots)
-
-word_secret= ['abacaxi', 'banana', 'laranja', 'limao', 'uva']
-game_of_strength(random.choice(word_secret))
+              wrong_letters.append(letter)
+              shoots-=1
+              print(f'Letras erradas: {wrong_letters}.')
+              print(f'Você ainda tem {shoots} tentativas.')   
+word_secret= ['SPORT', 'SANTACRUZ', 'NAUTICO', 'RETRO', 'SALGUEIRO', 'IBIS']   
+game_of_strenght(random.choice(word_secret))    
